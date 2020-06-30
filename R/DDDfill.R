@@ -26,9 +26,9 @@ rm(list=ls())
 
 
 DDDfill <- function(read_path, k_mean = 1, tol = 10, pvmvar = "otpvm", vnrovar = "vnr", kustvar = "kust", dddvar = "ddd", restoreOrder = 1){
-  # require(haven)
-  # require(sas7bdat)
-  # require(data.table)
+  require(haven)
+  require(sas7bdat)
+  require(data.table)
   dt <- setDT(read_sas(read_path))
   dt[, ddd:=as.numeric(get(dddvar))]
   dt[, vnr:=as.numeric(get(vnrovar))]
