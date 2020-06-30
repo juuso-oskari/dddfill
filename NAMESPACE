@@ -3,3 +3,4 @@
 import(data.table)
 import(sas7bdat)
 importFrom(haven,read_sas)
+export(DDDfill)
